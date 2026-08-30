@@ -1,0 +1,253 @@
+<title>Muskie Meeting Privacy Policy</title>
+<style>
+  :root{
+    --bg:#F4F6F5;
+    --surface:#FFFFFF;
+    --text:#1E2625;
+    --muted:#5B6B68;
+    --accent:#1F5E52;
+    --accent-soft:#E4EEEC;
+    --border:#DCE3E0;
+    --mono-tag:#3E4A48;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14201D;
+      --surface:#1A2825;
+      --text:#EAF1EE;
+      --muted:#9DB0AB;
+      --accent:#5FBBA5;
+      --accent-soft:#20342F;
+      --border:#2C3E39;
+      --mono-tag:#9DB0AB;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14201D;
+    --surface:#1A2825;
+    --text:#EAF1EE;
+    --muted:#9DB0AB;
+    --accent:#5FBBA5;
+    --accent-soft:#20342F;
+    --border:#2C3E39;
+    --mono-tag:#9DB0AB;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Source Sans 3", "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.65;
+  }
+  a{color:var(--accent);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .top-accent{height:6px; background:linear-gradient(90deg, var(--accent), var(--accent-soft));}
+
+  header.masthead{
+    max-width:760px;
+    margin:0 auto;
+    padding:2.75rem 1.5rem 1.5rem;
+  }
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+    font-size:.72rem;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--mono-tag);
+    background:var(--accent-soft);
+    border:1px solid var(--border);
+    padding:.3rem .6rem;
+    border-radius:3px;
+  }
+  h1{
+    font-family:"Fraunces", Georgia, "Times New Roman", serif;
+    font-weight:600;
+    font-size:clamp(2rem, 4vw, 2.6rem);
+    line-height:1.12;
+    margin:.9rem 0 .35rem;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
+  }
+  .dek{
+    color:var(--muted);
+    font-size:1.02rem;
+    max-width:46ch;
+    margin:0;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    margin-top:1.4rem;
+    padding-top:1.1rem;
+    border-top:1px solid var(--border);
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.78rem;
+    color:var(--muted);
+  }
+  .meta-row dt{text-transform:uppercase; letter-spacing:.06em; font-size:.68rem; margin-bottom:.2rem;}
+  .meta-row dd{margin:0; color:var(--text);}
+  .meta-row div{display:flex; flex-direction:column;}
+
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:.5rem 1.5rem 5rem;
+  }
+
+  nav.toc{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:1.1rem 1.3rem;
+    margin:1.75rem 0 2.5rem;
+  }
+  nav.toc p{
+    margin:0 0 .6rem;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  nav.toc ol{margin:0; padding-left:1.2rem; columns:2; column-gap:2rem;}
+  nav.toc li{margin-bottom:.35rem; font-size:.92rem;}
+  nav.toc a{text-decoration:none;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  section{margin-bottom:2.4rem; scroll-margin-top:1.5rem;}
+  section h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:1.32rem;
+    display:flex;
+    align-items:baseline;
+    gap:.6rem;
+    margin:0 0 .7rem;
+  }
+  section h2 .num{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.85rem;
+    color:var(--accent);
+    font-weight:500;
+  }
+  section p, section li{
+    max-width:65ch;
+    font-size:1rem;
+    color:var(--text);
+  }
+  section ul{padding-left:1.3rem;}
+  section li{margin-bottom:.4rem;}
+
+  .callout{
+    background:var(--accent-soft);
+    border-left:3px solid var(--accent);
+    padding:.9rem 1.1rem;
+    border-radius:0 6px 6px 0;
+    font-size:.95rem;
+    max-width:65ch;
+  }
+  .callout strong{color:var(--accent);}
+
+  footer{
+    max-width:760px;
+    margin:0 auto;
+    padding:2rem 1.5rem 3rem;
+    border-top:1px solid var(--border);
+    font-size:.85rem;
+    color:var(--muted);
+  }
+  footer a{color:var(--muted); text-decoration:underline;}
+
+  @media (max-width:520px){
+    nav.toc ol{columns:1;}
+    .meta-row{gap:1rem;}
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+
+<div class="top-accent"></div>
+<header class="masthead">
+  <span class="tag">Privacy Policy</span>
+  <h1>Muskie Meeting</h1>
+  <p class="dek">How we handle your information when you book a room and receive a text with your door access code.</p>
+  <dl class="meta-row">
+    <div><dt>Effective</dt><dd>August 30, 2026</dd></div>
+    <div><dt>Location</dt><dd>104 W Comanche Ave, Shabbona, IL 60550</dd></div>
+    <div><dt>Contact</dt><dd>Reply to your booking confirmation</dd></div>
+  </dl>
+</header>
+
+<main>
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#use">How we use it</a></li>
+      <li><a href="#sharing">Sharing &amp; SMS data</a></li>
+      <li><a href="#messages">Message frequency &amp; rates</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#choices">Your choices</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <h2><span class="num">01</span>What we collect</h2>
+    <p>When you book a room with Muskie Meeting through our Cal.com booking page, we collect the information you provide directly: your name, mobile phone number, and the dates and times of your stay. We don't collect anything beyond what's needed to give you access to your room.</p>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">02</span>How we use it</h2>
+    <p>We use your booking details to generate a temporary access code for the smart lock on your room, and we use your phone number for exactly one purpose: to text you that code, along with your check-in window and directions to your room, shortly after you book.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">03</span>Sharing &amp; SMS data</h2>
+    <div class="callout">
+      <strong>We do not sell, rent, or share your mobile phone number with third parties for their marketing purposes.</strong> Your number is used solely to deliver the automated messages described in this policy, and never for promotional messages from us or anyone else.
+    </div>
+    <p style="margin-top:1rem;">Your phone number and booking details are processed by our booking platform (Cal.com), our smart-lock provider (igloohome), and our text-messaging provider (Twilio) strictly to operate this service — never sold or shared beyond what's required to deliver your access code.</p>
+  </section>
+
+  <section id="messages">
+    <h2><span class="num">04</span>Message frequency &amp; rates</h2>
+    <p>You will receive one (1) text message per booking, sent automatically once your booking is confirmed. We do not send recurring or marketing texts. <strong>Message and data rates may apply</strong>, depending on your mobile carrier and plan.</p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">05</span>Retention</h2>
+    <p>We keep booking and contact information only as long as needed to support your stay and to meet basic recordkeeping and legal requirements, after which it's deleted.</p>
+  </section>
+
+  <section id="choices">
+    <h2><span class="num">06</span>Your choices</h2>
+    <ul>
+      <li>Reply <strong>STOP</strong> to any message from us to stop receiving texts.</li>
+      <li>Reply <strong>HELP</strong> to any message for assistance.</li>
+      <li>To ask us to delete your information, reply to your booking confirmation or contact us through the Cal.com booking platform.</li>
+    </ul>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">07</span>Security</h2>
+    <p>Access codes are generated per booking and expire automatically at the end of your stay window. We rely on our booking, lock, and messaging providers' standard security practices to protect your information in transit and at rest.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">08</span>Changes to this policy</h2>
+    <p>If this policy changes, we'll update the effective date above. Continuing to book with us after a change means you accept the updated policy.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Muskie Meeting &middot; 104 W Comanche Ave, Shabbona, IL 60550 &middot; See also our <a href="terms-of-service.html">Terms &amp; Conditions</a> for the SMS program.</p>
+</footer>

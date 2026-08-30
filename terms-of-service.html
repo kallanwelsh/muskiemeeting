@@ -1,0 +1,269 @@
+<title>Muskie Meeting SMS Terms</title>
+<style>
+  :root{
+    --bg:#F4F6F5;
+    --surface:#FFFFFF;
+    --text:#1E2625;
+    --muted:#5B6B68;
+    --accent:#1F5E52;
+    --accent-soft:#E4EEEC;
+    --border:#DCE3E0;
+    --mono-tag:#3E4A48;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14201D;
+      --surface:#1A2825;
+      --text:#EAF1EE;
+      --muted:#9DB0AB;
+      --accent:#5FBBA5;
+      --accent-soft:#20342F;
+      --border:#2C3E39;
+      --mono-tag:#9DB0AB;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14201D;
+    --surface:#1A2825;
+    --text:#EAF1EE;
+    --muted:#9DB0AB;
+    --accent:#5FBBA5;
+    --accent-soft:#20342F;
+    --border:#2C3E39;
+    --mono-tag:#9DB0AB;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Source Sans 3", "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height:1.65;
+  }
+  a{color:var(--accent);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .top-accent{height:6px; background:linear-gradient(90deg, var(--accent), var(--accent-soft));}
+
+  header.masthead{
+    max-width:760px;
+    margin:0 auto;
+    padding:2.75rem 1.5rem 1.5rem;
+  }
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+    font-size:.72rem;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--mono-tag);
+    background:var(--accent-soft);
+    border:1px solid var(--border);
+    padding:.3rem .6rem;
+    border-radius:3px;
+  }
+  h1{
+    font-family:"Fraunces", Georgia, "Times New Roman", serif;
+    font-weight:600;
+    font-size:clamp(2rem, 4vw, 2.6rem);
+    line-height:1.12;
+    margin:.9rem 0 .35rem;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
+  }
+  .dek{
+    color:var(--muted);
+    font-size:1.02rem;
+    max-width:46ch;
+    margin:0;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    margin-top:1.4rem;
+    padding-top:1.1rem;
+    border-top:1px solid var(--border);
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.78rem;
+    color:var(--muted);
+  }
+  .meta-row dt{text-transform:uppercase; letter-spacing:.06em; font-size:.68rem; margin-bottom:.2rem;}
+  .meta-row dd{margin:0; color:var(--text);}
+  .meta-row div{display:flex; flex-direction:column;}
+
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:.5rem 1.5rem 5rem;
+  }
+
+  nav.toc{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:1.1rem 1.3rem;
+    margin:1.75rem 0 2.5rem;
+  }
+  nav.toc p{
+    margin:0 0 .6rem;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  nav.toc ol{margin:0; padding-left:1.2rem; columns:2; column-gap:2rem;}
+  nav.toc li{margin-bottom:.35rem; font-size:.92rem;}
+  nav.toc a{text-decoration:none;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  section{margin-bottom:2.4rem; scroll-margin-top:1.5rem;}
+  section h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:1.32rem;
+    display:flex;
+    align-items:baseline;
+    gap:.6rem;
+    margin:0 0 .7rem;
+  }
+  section h2 .num{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.85rem;
+    color:var(--accent);
+    font-weight:500;
+  }
+  section p, section li{
+    max-width:65ch;
+    font-size:1rem;
+    color:var(--text);
+  }
+  section ul{padding-left:1.3rem;}
+  section li{margin-bottom:.4rem;}
+
+  .callout{
+    background:var(--accent-soft);
+    border-left:3px solid var(--accent);
+    padding:.9rem 1.1rem;
+    border-radius:0 6px 6px 0;
+    font-size:.95rem;
+    max-width:65ch;
+  }
+  .callout strong{color:var(--accent);}
+
+  .keyword-table{
+    width:100%;
+    max-width:65ch;
+    border-collapse:collapse;
+    margin-top:.5rem;
+    font-size:.95rem;
+  }
+  .keyword-table th, .keyword-table td{
+    text-align:left;
+    padding:.6rem .8rem;
+    border-bottom:1px solid var(--border);
+  }
+  .keyword-table th{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--muted);
+  }
+  .keyword-table td:first-child{font-weight:600; font-family:"IBM Plex Mono", ui-monospace, monospace; color:var(--accent);}
+
+  footer{
+    max-width:760px;
+    margin:0 auto;
+    padding:2rem 1.5rem 3rem;
+    border-top:1px solid var(--border);
+    font-size:.85rem;
+    color:var(--muted);
+  }
+  footer a{color:var(--muted); text-decoration:underline;}
+
+  @media (max-width:520px){
+    nav.toc ol{columns:1;}
+    .meta-row{gap:1rem;}
+    .keyword-table{font-size:.85rem;}
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+
+<div class="top-accent"></div>
+<header class="masthead">
+  <span class="tag">SMS Terms &amp; Conditions</span>
+  <h1>Muskie Meeting</h1>
+  <p class="dek">The terms for our automated door-code text message program.</p>
+  <dl class="meta-row">
+    <div><dt>Effective</dt><dd>August 30, 2026</dd></div>
+    <div><dt>Location</dt><dd>104 W Comanche Ave, Shabbona, IL 60550</dd></div>
+    <div><dt>Program</dt><dd>Transactional / low-volume</dd></div>
+  </dl>
+</header>
+
+<main>
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#program">The program</a></li>
+      <li><a href="#optin">How you opt in</a></li>
+      <li><a href="#frequency">Frequency &amp; cost</a></li>
+      <li><a href="#keywords">Keywords</a></li>
+      <li><a href="#carriers">Carrier liability</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+    </ol>
+  </nav>
+
+  <section id="program">
+    <h2><span class="num">01</span>The program</h2>
+    <p>Muskie Meeting sends one automated text message per confirmed booking, containing your room's temporary access code, your check-in and check-out times, and directions to your room at 104 W Comanche Ave, Shabbona, IL. This is a transactional service message, not a marketing program.</p>
+  </section>
+
+  <section id="optin">
+    <h2><span class="num">02</span>How you opt in</h2>
+    <p>You opt in by entering your mobile phone number as part of completing a booking on our Cal.com booking page. Submitting a booking with a phone number is your consent to receive the one-time text described above for that booking.</p>
+  </section>
+
+  <section id="frequency">
+    <h2><span class="num">03</span>Frequency &amp; cost</h2>
+    <div class="callout">
+      <strong>One message per booking.</strong> Message and data rates may apply, depending on your mobile carrier and plan.
+    </div>
+  </section>
+
+  <section id="keywords">
+    <h2><span class="num">04</span>Keywords</h2>
+    <table class="keyword-table">
+      <thead><tr><th>Keyword</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td>STOP</td><td>Unsubscribes you from further messages.</td></tr>
+        <tr><td>HELP</td><td>Sends you help and contact information.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="carriers">
+    <h2><span class="num">05</span>Carrier liability</h2>
+    <p>Carriers are not liable for delayed or undelivered messages. Message delivery depends on network coverage and your carrier's systems, which we don't control.</p>
+  </section>
+
+  <section id="privacy">
+    <h2><span class="num">06</span>Privacy</h2>
+    <p>Your phone number is used only to deliver the messages described here and is never shared for third-party marketing. See our <a href="privacy-policy.html">Privacy Policy</a> for the full detail on what we collect and how it's used.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">07</span>Changes to these terms</h2>
+    <p>If these terms change, we'll update the effective date above. Continuing to book with us after a change means you accept the updated terms.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Muskie Meeting &middot; 104 W Comanche Ave, Shabbona, IL 60550 &middot; Reply <strong>HELP</strong> to any text for support, or <strong>STOP</strong> to opt out.</p>
+</footer>
